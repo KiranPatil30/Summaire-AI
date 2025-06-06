@@ -1,5 +1,6 @@
 # Sommaire - Transform PDFs into a beautiful reel of impactful summaries with the power of AI
 
+![Project Image](https://www.sommaire.vercel.app/opengraph-image.jpg)
 
 Sommaire is an AI-powered application that transforms PDFs into beautiful, structured summaries with key insights. Built with modern web technologies, it offers secure file processing, user management, and subscription-based access.
 
