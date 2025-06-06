@@ -32,15 +32,6 @@ function HeaderSkeleton() {
                 animate="visible"
                 className="self-start"
               >
-                {/* <Button
-                  variant={"link"}
-                  className="bg-gradient-to-r from-rose-500 to-rose-700 hover:from-rose-600 hover:to-rose-800 hover:scale-105 transition-all duration-300 group hover:no-underline"
-                >
-                  <Link href="/upload" className="flex items-center text-white">
-                    <Plus className="w-5 h-5 mr-2" />
-                    New Summary
-                  </Link>
-                </Button> */}
                 <Skeleton className='h-10 w-32'/>
               </MotionDiv>
             </div>;

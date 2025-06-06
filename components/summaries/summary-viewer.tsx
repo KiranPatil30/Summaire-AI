@@ -50,11 +50,6 @@ export function SummaryViewer({ summary }: { summary: string }) {
       className="h-full overflow-y-auto scrollbar-hide pt-12 sm:pt-16 pb-20 sm:pb-24">
         <div className="px-4 sm:px-6">
           <SectionTitle title={sections[currentSection]?.title || ""} />
-          {/* <ul>
-            {sections[currentSection]?.points.map((point, index) => (
-              <li key={index}>{point}</li>
-            ))}
-          </ul> */}
           <ContentSection
           title={sections[currentSection]?.title || ''}
           points={sections[currentSection]?.points || []}/>

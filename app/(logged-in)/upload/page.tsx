@@ -5,17 +5,11 @@ import UploadHeader from "@/components/upload/upload-header";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/dist/server/api-utils";
 
+
+export const maxDuration = 60;
+
 export default  async function Page() {
-  const user = await currentUser()
-
-  // if(!user?.id){
-  //   redirect('/sign-in');
-    
-  // }
-  // const userId = user?.id;
-  // const (hasRea)
-
-
+  const user = await currentUser();
   return (
     <section className="min-h-screen">
       <BgGradient />

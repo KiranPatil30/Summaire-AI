@@ -5,9 +5,7 @@ import { cotainerVariants, itemVariants } from "@/utils/constants";
 const EmojiPoint = ({ point }: { point: string }) => {
   const { emoji, text } = parseEmojiPoint(point) ?? {};
   const parsed = parseEmojiPoint(point);
-  console.log("parseEmojiPoint result:", parsed);
-  console.log("Raw point:", point);
-  console.log("Parsed:", parsed);
+  
 
   return (
     <MotionDiv

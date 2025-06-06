@@ -184,37 +184,3 @@ async function createPayment({
         throw error;
     }
 }
-// async function createPayment({
-//   sql,
-//   payment,
-//   priceId,
-//   userEmail
-// }: {
-//   sql: any;
-//   payment: RazorpayPayment;
-//   priceId: string;
-//   userEmail: string;
-// }) {
-//   try {
-//     const { amount, id, status } = payment;
-
-//     await sql`
-//       INSERT INTO payments (
-//         amount,
-//         status,
-//         stripe_payment_id,
-//         price_id,
-//         user_email
-//       ) VALUES (
-//         ${amount},
-//         ${status},
-//         ${id},
-//         ${priceId},
-//         ${userEmail}
-//       )
-//     `;
-//   } catch (error) {
-//     console.error('Error creating payment:', error);
-//     throw error;
-//   }
-// }

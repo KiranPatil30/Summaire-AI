@@ -45,26 +45,7 @@ export const UploadFormInput = forwardRef<
     </div>
   );
 });
-// export default function UploadFormInput({ onSubmit }: UploadFormInputProps) {
 
-//   return (
-//     <div>
-//       <form className="flex flex-col gap-6" action="" onSubmit={onSubmit}>
-//         <div className="flex justify-end items-center gap-1">
-
-//         <Input
-//           type="file"
-//           id="file"
-//           name="file"
-//           accept="application/pdf"
-//           className=""
-//         />
-
-//         <Button>Upload you PDF</Button></div>
-//       </form>
-//     </div>
-//   );
-// }
 UploadFormInput.displayName = "UploadFormInput";
 
 export default UploadFormInput;

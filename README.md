@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sommaire - Transform PDFs into a beautiful reel of impactful summaries with the power of AI
 
-## Getting Started
 
-First, run the development server:
+Sommaire is an AI-powered application that transforms PDFs into beautiful, structured summaries with key insights. Built with modern web technologies, it offers secure file processing, user management, and subscription-based access.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Application Features
+- Clear, structured summaries with key points and insights
+- Beautiful, interactive summary viewer with progress tracking
+- Secure file handling and processing
+- Protected routes and API endpoints
+- Flexible pricing plans (Basic and Pro)
+- Webhook implementation for Stripe events
+- User dashboard for managing summaries
+- Responsive design for mobile and desktop
+- Real-time updates and path revalidation
+- Production-ready deployment
+- Toast notifications for upload status, processing updates, and error handling
+- Performance optimizations
+- SEO-friendly summary generation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core Technologies
+- *Next.js 15 App Router* for server-side rendering, routing, and API endpoints
+- *React* for building interactive user interfaces
+- *Clerk* for secure authentication (Passkeys, Github, Google Sign-in)
+- *GPT-4* powered summarization with contextual understanding
+- *Langchain* for PDF parsing and text extraction
+- *ShadeN UI* for accessible, customizable React components
+- *NeonDB (PostgreSQL)* for serverless database storage
+- *UploadThing* for secure PDF uploads (up to 32MB)
+- *Stripe* for subscription management and payments
+- *TypeScript* for static typing
+- *TailwindCSS 4* for responsive styling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+To get started with this project:
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork the repo
+2. Copy the .env.example variables into a separate .env.local file
+3. Create the required credentials:
+   - OpenAI API key
+   - Clerk authentication
+   - UploadThing configuration
+   - Stripe payment setup
+   - NeonDB database connection
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
