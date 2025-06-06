@@ -15,5 +15,7 @@ export default compat.config({
   rules: {
     "prettier/prettier": "error",
     "react/no-escape-entities": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
   },
 });

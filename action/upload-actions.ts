@@ -1,4 +1,4 @@
-'use server'
+"use server";
 
 import { getDbConnection } from "@/lib/db";
 import { generateSummaryFromGemini } from "@/lib/geminiai";
@@ -8,15 +8,11 @@ import { formatFileNameAsTitle } from "@/utils/format-utils";
 import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 
-export async function generatePdfText({
-  pdfUrl,
-}: {
-  pdfUrl: string;
-}) {
+export async function generatePdfText({ pdfUrl }: { pdfUrl: string }) {
   if (!pdfUrl) {
     return {
       success: false,
-      message: 'PDF URL is missing',
+      message: "PDF URL is missing",
       data: null,
     };
   }
@@ -27,23 +23,23 @@ export async function generatePdfText({
     if (!pdfText) {
       return {
         success: false,
-        message: 'Failed to extract text from PDF.',
+        message: "Failed to extract text from PDF.",
         data: null,
       };
     }
 
     return {
       success: true,
-      message: 'PDF text extracted successfully.',
+      message: "PDF text extracted successfully.",
       data: {
         pdfText,
       },
     };
   } catch (err) {
-    console.error('Error while extracting PDF text:', err);
+    console.error("Error while extracting PDF text:", err);
     return {
       success: false,
-      message: 'An unexpected error occurred during text extraction.',
+      message: "An unexpected error occurred during text extraction.",
       data: null,
     };
   }
@@ -59,7 +55,7 @@ export async function generatePdfSummary({
   if (!pdfUrl) {
     return {
       success: false,
-      message: 'PDF URL is missing',
+      message: "PDF URL is missing",
       data: null,
     };
   }
@@ -72,15 +68,14 @@ export async function generatePdfSummary({
       summary = await generateSummaryFromOpenAI(pdfText);
     } catch (error) {
       console.error("Error with OpenAI:", error);
-      if (
-        error instanceof Error &&
-        error.message === 'RATE_LIMITED_EXCEEDED'
-      ) {
+      if (error instanceof Error && error.message === "RATE_LIMITED_EXCEEDED") {
         try {
           summary = await generateSummaryFromGemini(pdfText);
         } catch (geminiError) {
-          console.error('Gemini API error:', geminiError);
-          throw new Error('Failed to generate summary with available AI providers');
+          console.error("Gemini API error:", geminiError);
+          throw new Error(
+            "Failed to generate summary with available AI providers",
+          );
         }
       }
     }
@@ -88,7 +83,7 @@ export async function generatePdfSummary({
     if (!summary) {
       return {
         success: false,
-        message: 'Summary generation failed',
+        message: "Summary generation failed",
         data: null,
       };
     }
@@ -96,7 +91,7 @@ export async function generatePdfSummary({
     const formattedFileName = formatFileNameAsTitle(fileName);
     return {
       success: true,
-      message: 'Summary generated',
+      message: "Summary generated",
       data: {
         title: formattedFileName,
         summary,
@@ -106,7 +101,7 @@ export async function generatePdfSummary({
     console.error("Error during summary generation:", err);
     return {
       success: false,
-      message: 'An unexpected error occurred during summary generation.',
+      message: "An unexpected error occurred during summary generation.",
       data: null,
     };
   }
@@ -147,7 +142,7 @@ async function savePdfSummary({
     `;
     return savedSummary;
   } catch (error) {
-    console.error('Error saving pdf_summaries:', error);
+    console.error("Error saving pdf_summaries:", error);
     throw error;
   }
 }
@@ -157,13 +152,13 @@ export async function storePdfSummaryAction({
   summary,
   title,
   fileName,
-}: Omit<PdfSummaryType, 'userId'>) {
+}: Omit<PdfSummaryType, "userId">) {
   try {
     const { userId } = await auth();
     if (!userId) {
       return {
         success: false,
-        message: 'User not found',
+        message: "User not found",
         data: null,
       };
     }
@@ -179,7 +174,7 @@ export async function storePdfSummaryAction({
     if (!savedSummary) {
       return {
         success: false,
-        message: 'Failed to save PDF summary',
+        message: "Failed to save PDF summary",
         data: null,
       };
     }
@@ -188,7 +183,7 @@ export async function storePdfSummaryAction({
 
     return {
       success: true,
-      message: 'PDF summary saved',
+      message: "PDF summary saved",
       data: {
         id: savedSummary.id,
       },
@@ -196,7 +191,8 @@ export async function storePdfSummaryAction({
   } catch (error) {
     return {
       success: false,
-      message: error instanceof Error ? error.message : 'Error saving PDF summary',
+      message:
+        error instanceof Error ? error.message : "Error saving PDF summary",
       data: null,
     };
   }

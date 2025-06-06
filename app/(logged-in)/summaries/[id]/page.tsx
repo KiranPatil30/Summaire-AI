@@ -7,8 +7,8 @@ import { getSummaryById } from "@/lib/summaries";
 import { FileText } from "lucide-react";
 import { notFound } from "next/navigation";
 
-export default async function SummaryPage(props:{
-  params: Promise<{id:string}>;
+export default async function SummaryPage(props: {
+  params: Promise<{ id: string }>;
 }) {
   const params = await props.params;
   const id = params.id;
@@ -29,7 +29,7 @@ export default async function SummaryPage(props:{
     original_file_url,
   } = summary;
 
-  const readingTime = 20
+  const readingTime = 20;
 
   return (
     <div className="relative isolate min-h-screen bg-gradient-to-b from-rose-50/40 to-white">

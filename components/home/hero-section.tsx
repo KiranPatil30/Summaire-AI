@@ -44,7 +44,10 @@ export default function HeroSection() {
       <MotionH1 variants={itemVariants} className="font-bold py-6 text-center">
         Tranform PDFs into
         <span className="relative inline-block">
-          <MotionSpan whileHover={buttonVariants} className="relative z-10 px-2">
+          <MotionSpan
+            whileHover={buttonVariants}
+            className="relative z-10 px-2"
+          >
             concise
           </MotionSpan>
           <span

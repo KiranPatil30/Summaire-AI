@@ -7,7 +7,11 @@ import { getSummaries } from "@/lib/summaries";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import EmptyState from "@/components/summaries/empty-summary-state";
-import { MotionDiv, MotionH1, MotionP } from "@/components/common/motion-wrapper";
+import {
+  MotionDiv,
+  MotionH1,
+  MotionP,
+} from "@/components/common/motion-wrapper";
 import { itemVariants } from "@/utils/constants";
 
 export default async function DashboardPage() {
@@ -22,11 +26,11 @@ export default async function DashboardPage() {
       <BgGradient className="from-emerald-200 via-teal-200 to-cyan-200" />
       <div className="from-emerald-200 via-teal-200 to-cyan-200 bg-gradient-to-b">
         <MotionDiv
-          
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration:0.5}}
-        className="container mx-auto flex flex-col gap-4">
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="container mx-auto flex flex-col gap-4"
+        >
           <div className="px-2 py-12 sm:py-24">
             <div className="flex gap-4 mb-8 justify-between">
               <div className="flex flex-col gap-2">
@@ -75,8 +79,8 @@ export default async function DashboardPage() {
             >
               <div className="bg-rose-50 border border-rose-200 rounded-lg p-4 text-rose-800">
                 <p className="text-sm">
-                  You've reached the limit of {uploadLimit} uploads on the Basic
-                  plan.{" "}
+                  You&apos;ve reached the limit of {uploadLimit} uploads on the
+                  Basic plan.
                   <Link
                     href="/#pricing"
                     className="text-rose-800 underline font-medium underline-offset-4 inline-flex items-center"

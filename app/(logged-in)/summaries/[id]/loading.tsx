@@ -1,8 +1,6 @@
 import BgGradient from "@/components/common/bg-gradient";
 import { Skeleton } from "@/components/ui/skeleton";
 import LoadingSkeleton from "@/components/upload/loading-skeleton";
-import { cn } from "@/lib/utils";
-import { FileText } from "lucide-react";
 
 function HeaderSkeleton() {
   return (
@@ -12,19 +10,6 @@ function HeaderSkeleton() {
         <Skeleton className="h-5 w-40 rounded-full bg-white/80" />
       </div>
       <Skeleton className="h-12 w-3/4 rounded-full bg-white/80" />
-    </div>
-  );
-}
-
-function ContentSkeleton() {
-  return (
-    <div className="space-y-4">
-      {[...Array(6)].map((_, i) => (
-        <Skeleton
-          key={i}
-          className={cn("h-4", i % 2 === 0 ? "w-full" : "w-11/12 bg-white/80")}
-        />
-      ))}
     </div>
   );
 }
@@ -45,7 +30,6 @@ export default function LoadingSummary() {
               <div className="flex gap-2">
                 <Skeleton className="w-12 h-6" />
                 <Skeleton className="w-12 h-6" />
-
               </div>
             </div>
             <div className="relative overflow-hidden  ">

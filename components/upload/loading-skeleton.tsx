@@ -1,6 +1,6 @@
-import { Card } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
-import { cn } from '@/lib/utils';
+import { Card } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 
 export default function LoadingSkeleton() {
   return (
@@ -15,8 +15,8 @@ export default function LoadingSkeleton() {
             >
               <div
                 className={cn(
-                  'h-full bg-gradient-to-r from-gray-500 to-rose-600 animate-pulse',
-                  index === 0 ? 'w-full' : 'w-0'
+                  "h-full bg-gradient-to-r from-gray-500 to-rose-600 animate-pulse",
+                  index === 0 ? "w-full" : "w-0",
                 )}
               />
             </div>

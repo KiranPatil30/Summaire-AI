@@ -1,24 +1,23 @@
 export const cotainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.2,
-            delayChildren: 0.1,
-        },
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
     },
-}
-
+  },
+};
 
 export const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            type: 'spring',
-            damping: 15,
-            stiffness: 50,
-            duration: 0.8,
-        }
-    }
-}
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 50,
+      duration: 0.8,
+    },
+  },
+};

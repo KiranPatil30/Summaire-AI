@@ -20,11 +20,11 @@ const schema = z.object({
     .refine((file) => file.size > 0, "File is required")
     .refine(
       (file) => file.size < 1024 * 1024 * 10,
-      "File must be less than 10MB"
+      "File must be less than 10MB",
     )
     .refine(
       (file) => file.type === "application/pdf",
-      "Only PDF files are allowed"
+      "Only PDF files are allowed",
     ),
 });
 
@@ -62,7 +62,7 @@ export default function UploadForm() {
       const result = schema.safeParse({ file });
       if (!result.success) {
         toast.error(
-          result.error.flatten().fieldErrors.file?.[0] ?? "Invalid file"
+          result.error.flatten().fieldErrors.file?.[0] ?? "Invalid file",
         );
         return;
       }
@@ -151,7 +151,7 @@ export default function UploadForm() {
           <div className="relative">
             <div
               className="absolute inset-0 flex items-center"
-              aria-hidden="true" 
+              aria-hidden="true"
             >
               <div className="w-full border-t border-gray-200 dark:border-gray-800" />
             </div>

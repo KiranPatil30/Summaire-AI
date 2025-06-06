@@ -1,6 +1,6 @@
-import { FileText } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { FileText } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function EmptyState() {
   return (
@@ -15,7 +15,7 @@ export default function EmptyState() {
         </p>
         <Link href="/upload">
           <Button
-            variant={'link'}
+            variant={"link"}
             className="mt-4 text-white bg-gradient-to-r from-rose-500 to-rose-700 hover:from-rose-600 hover:to-rose-800 hover:no-underline"
           >
             Create Your First Summary

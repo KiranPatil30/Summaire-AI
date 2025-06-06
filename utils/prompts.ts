@@ -41,4 +41,4 @@ Example format:
 This is how every point should look 
 This is another example point 
 Never deviate from this format. Every line that
-contains content must start with ". "followed by an emoji.`
+contains content must start with ". "followed by an emoji.`;

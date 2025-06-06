@@ -67,18 +67,19 @@ const PricingCard = ({
   return (
     <MotionDiv
       variants={listVariant}
-      whileHover={{scale:1.02}}
+      whileHover={{ scale: 1.02 }}
       className="realtive w-full max-w-lg hover:scale-105 hover:transition-all duration-300"
     >
       <div
         className={cn(
           "relative flex flex-col h-full gap-4 lg:gap-8 z-10 p-8 border-[1px] border-gray-500/20 rounded-2xl",
-          id === "pro" && "border-rose-500 gap-5 border-2"
+          id === "pro" && "border-rose-500 gap-5 border-2",
         )}
       >
         <MotionDiv
-        variants={listVariant}
-        className="flex justify-between items-center gap-4">
+          variants={listVariant}
+          className="flex justify-between items-center gap-4"
+        >
           <div className="">
             <p className="text-lg lg:text-xl font-bold capitalize">{name}</p>
             <p className="text-base-content/80 mt-2">{desciption}</p>
@@ -92,10 +93,10 @@ const PricingCard = ({
             <p className="text-xs ">/month</p>
           </div>
         </div>
-        <MotionDiv 
-        variants={listVariant}
-        
-        className="space-y-2.5 leading-relaxed text-base flex-1">
+        <MotionDiv
+          variants={listVariant}
+          className="space-y-2.5 leading-relaxed text-base flex-1"
+        >
           {items.map((item, idx) => (
             <li key={idx} className="flex items-center gap-2">
               <CheckIcon size={18} />
@@ -104,16 +105,16 @@ const PricingCard = ({
           ))}
         </MotionDiv>
         <MotionDiv
-        variants={listVariant}
-        
-        className="space-y-2 flex justify-center w-full">
+          variants={listVariant}
+          className="space-y-2 flex justify-center w-full"
+        >
           <Link
             href={paymentLink}
             className={cn(
               "w-full rounded-full flex items-center justify-center gap-2 bg-linear-to-r from-rose-800 to-rose-500 hover:from-rose-500 hover:to-rose-800 text-white border-2 py-2",
               id === "pro"
                 ? "border-rose-900"
-                : "border-rose-100 from-rose-400 to-rose-500"
+                : "border-rose-100 from-rose-400 to-rose-500",
             )}
           >
             Buy Now <ArrowRight />

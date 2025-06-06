@@ -7,6 +7,7 @@ Sommaire is an AI-powered application that transforms PDFs into beautiful, struc
 ## ✨ Features
 
 ### Application Features
+
 - Clear, structured summaries with key points and insights
 - Beautiful, interactive summary viewer with progress tracking
 - Secure file handling and processing
@@ -22,17 +23,18 @@ Sommaire is an AI-powered application that transforms PDFs into beautiful, struc
 - SEO-friendly summary generation
 
 ### Core Technologies
-- *Next.js 15 App Router* for server-side rendering, routing, and API endpoints
-- *React* for building interactive user interfaces
-- *Clerk* for secure authentication (Passkeys, Github, Google Sign-in)
-- *GPT-4* powered summarization with contextual understanding
-- *Langchain* for PDF parsing and text extraction
-- *ShadeN UI* for accessible, customizable React components
-- *NeonDB (PostgreSQL)* for serverless database storage
-- *UploadThing* for secure PDF uploads (up to 32MB)
-- *Stripe* for subscription management and payments
-- *TypeScript* for static typing
-- *TailwindCSS 4* for responsive styling
+
+- _Next.js 15 App Router_ for server-side rendering, routing, and API endpoints
+- _React_ for building interactive user interfaces
+- _Clerk_ for secure authentication (Passkeys, Github, Google Sign-in)
+- _GPT-4_ powered summarization with contextual understanding
+- _Langchain_ for PDF parsing and text extraction
+- _ShadeN UI_ for accessible, customizable React components
+- _NeonDB (PostgreSQL)_ for serverless database storage
+- _UploadThing_ for secure PDF uploads (up to 32MB)
+- _Stripe_ for subscription management and payments
+- _TypeScript_ for static typing
+- _TailwindCSS 4_ for responsive styling
 
 ## 🚀 Getting Started
 
@@ -46,4 +48,3 @@ To get started with this project:
    - UploadThing configuration
    - Stripe payment setup
    - NeonDB database connection
-

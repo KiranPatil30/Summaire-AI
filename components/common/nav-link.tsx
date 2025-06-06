@@ -1,10 +1,8 @@
 "use client";
 
-
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 export default function NavLink({
   href,
@@ -15,15 +13,16 @@ export default function NavLink({
   children: React.ReactNode;
   className?: string;
 }) {
-    const pathname = usePathname();
-    const isActive = pathname === href || (href != '/' && pathname.startsWith(href));
+  const pathname = usePathname();
+  const isActive =
+    pathname === href || (href != "/" && pathname.startsWith(href));
   return (
     <Link
       href={href}
       className={cn(
         "transistion-colors text-sm duration-200 text-gray-600 hover:text-rose-500",
         className,
-        isActive && 'text-rose-500'
+        isActive && "text-rose-500",
       )}
     >
       {children}
